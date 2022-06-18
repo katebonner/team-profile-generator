@@ -2,12 +2,12 @@
 const generateManagerSection = (manager) => {
     return `
      <div class="card">
-        <div class="card-title">
+        <div class="card-header">
             <h2>${manager.name}</h2>
             <h3>Manager</h3>
         </div>
         <div class="card-body">
-            <p class="id"> Employee ID: ${manager.id}</p>
+            <p class="id"> Employee ID: ${manager.eid}</p>
             <p class="email"> Email: <a href="mailto:${manager.email}">${manager.email}</a></p>
             <p class="officeNumber"> Office Number: ${manager.officeNumber}</p>
          </div>
@@ -19,12 +19,12 @@ const generateManagerSection = (manager) => {
 const generateEngineerSection = (engineer) => {
     return `
      <div class="card">
-        <div class="card-title">
+        <div class="card-header">
             <h2>${engineer.name}</h2>
             <h3>Engineer</h3>
         </div>
         <div class="card-body">
-            <p class="id"> Employee ID: ${engineer.id}</p>
+            <p class="id"> Employee ID: ${engineer.eid}</p>
             <p class="email"> Email: <a href="mailto:${engineer.email}">${engineer.email}</a></p>
             <p class="gitHub"> GitHub: ${engineer.github}</p>
          </div>
@@ -36,13 +36,13 @@ const generateEngineerSection = (engineer) => {
 const generateInternSection = (intern) => {
     return `
      <div class="card">
-        <div class="card-title">
+        <div class="card-header">
             <h2>${intern.name}</h2>
             <h3>Intern</h3>
         </div>
         <div class="card-body">
-            <p class="id"> Employee ID: ${intern.id}</p>
-            <p class="email"> Email: <a href="mailto:${intern.email}">${engineer.email}</a></p>
+            <p class="id"> Employee ID: ${intern.eid}</p>
+            <p class="email"> Email: <a href="mailto:${intern.email}">${intern.email}</a></p>
             <p class="gitHub"> School: ${intern.school}</p>
          </div>
     </div>
@@ -70,7 +70,7 @@ const generateFullHTML = (employeeListHTMLString) => {
     `
 }
 
-generatePage = (data) => {
+module.exports = generatePage = (data) => {
     // CREATE ARRAY TO HOLD EMPLOYEE CARD HMTL STRINGS
     let employeeCards = [];
     // LOOP THROUGH DATA TO CREATE EMPLOYEE SECTIONS 
@@ -104,7 +104,3 @@ generatePage = (data) => {
     return HTMLpage;
 
 }
-
-
-// EXPORT generatePage
-module.exports = generatePage;

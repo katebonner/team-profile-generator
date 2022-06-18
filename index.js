@@ -8,7 +8,7 @@ const Engineer = require('./lib/engineer');
 const Intern = require('./lib/intern');
 
 // INCLUDE PAGE GENERATION JS MODULE
-const generatePage = require('./src/generatePage');
+const generatePage = require("./src/generatePage");
 
 // CREATE ARRAY TO STORE TEAM OBJECTS
 const team = [];
@@ -85,10 +85,23 @@ const createTeam = async () => {
         const manager = new Manager(name, eid, email, officeNumber);
         team.push(manager);
         addMember()
+        .then( team => {
+            console.log("generating page ...");
+            return generatePage(team);
+        })
+        .then(pageString => {
+            console.log('writing file ...');
+            const pageOutput = fs.writeFile('./team.html', pageString, (err) => {
+            err ? console.error(err) : console.log('html created')});
+            return pageOutput;
+        })
+        .catch( err => {
+            console.log(err)
+        });
     })
 }
 
-const addMember = () => {
+const addMember = async () => {
     console.log(
         `
 
@@ -196,26 +209,17 @@ const addMember = () => {
             team.push(intern);
         }
         if (input.addAnotherMember) {
-            addMember();
+            return addMember(team);
         }
         if (!input.addAnotherMember) {
-            console.log(team);
             return team;
         }
     })
 }
 
 createTeam()
-    .then( team => {
-        generatePage(team)
-    })
-    .then(pageString => {
-        return fs.writeFile()
-    })
-    .catch( err => {
-        console.log(err)
-    });
 
-t
+
+
 
 
