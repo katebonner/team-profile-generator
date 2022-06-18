@@ -1,0 +1,25 @@
+:root {
+    font-family: avenir, sans-serif;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+}
+.card {
+    border-radius: 15px;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+.card-header {
+    margin: 0;
+    padding: 0;
+    background-color: orange;
+}
+
+.card-body {
+    margin: 0;
+    padding: 0;
+    background-color: blue;
+}

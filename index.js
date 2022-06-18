@@ -1,10 +1,14 @@
 // INCLUDE PACKAGES NEEDED FOR THIS APPLICATION
 const inquirer = require('inquirer');
+const fs = require('fs'); 
 
 // INCLUDE LIBRARIES OF CLASS CONSTRUCTORS
 const Manager = require('./lib/manager');
 const Engineer = require('./lib/engineer');
 const Intern = require('./lib/intern');
+
+// INCLUDE PAGE GENERATION JS MODULE
+const generatePage = require('./src/generatePage');
 
 // CREATE ARRAY TO STORE TEAM OBJECTS
 const team = [];
@@ -202,6 +206,16 @@ const addMember = () => {
 }
 
 createTeam()
+    .then( team => {
+        generatePage(team)
+    })
+    .then(pageString => {
+        return fs.writeFile()
+    })
+    .catch( err => {
+        console.log(err)
+    });
 
+t
 
 
