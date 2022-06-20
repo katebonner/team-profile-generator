@@ -1,25 +1,70 @@
-GIVEN a command-line application that accepts user input
-WHEN I am prompted for my team members and their information
+# Columbia University Coding Bootcamp - Team Profile Generator: Challenge 6: 
 
-THEN an HTML file is generated that displays a nicely formatted team roster based on user input
+## Description
 
-WHEN I click on an email address in the HTML
-THEN my default email program opens and populates the TO field of the email with the address
+This command-line applications prompts the user for input on the profile information of team members and then generates an HTML file to display the team roster
 
-WHEN I click on the GitHub username
-THEN that GitHub profile opens in a new tab
+![team dashboard](./assets/team.png)
 
-WHEN I start the application
-THEN I am prompted to enter the team manager’s name, employee ID, email address, and office number
+## Table of Contents 
 
-WHEN I enter the team manager’s name, employee ID, email address, and office number
-THEN I am presented with a menu with the option to add an engineer or an intern or to finish building my team
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [License](#license)
 
-WHEN I select the engineer option
-THEN I am prompted to enter the engineer’s name, ID, email, and GitHub username, and I am taken back to the menu
 
-WHEN I select the intern option
-THEN I am prompted to enter the intern’s name, ID, email, and school, and I am taken back to the menu
+## Installation
 
-WHEN I decide to finish building my team
-THEN I exit the application, and the HTML is generated
+To install this project, navigate to your comand line console (for simplicity we will assume you are using terminal) and:
+
+Clone this repository.
+```md
+git clone git@github.com:katebonner/team-profile-generator.git
+```
+ensure you have installed node.js by checking the version.
+```md
+node -v
+```
+if it has not been installed please navigate to https://nodejs.org/en/download/. lastly, ensure you have installed the node pkg inquirer.js version 8.2.4 or higher.
+```md
+npm inquierer -v
+```
+if it has not been installed, install it.
+```md
+npm install inquirer
+```
+
+
+## Usage
+
+This project provides an example of of how to collect user input via inquirer.js, structure that input into objects, and subsequently re-structure those objects into dynamically generated HTML. 
+
+## Credits
+
+This project leverages [Bootstrap](https://getbootstrap.com/) for styling.
+
+
+## License
+
+MIT License
+
+Copyright (c) 2022 Kate Bonner
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

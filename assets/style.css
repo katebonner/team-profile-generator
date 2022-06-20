@@ -3,23 +3,27 @@
 }
 
 .card-container {
-    display: flex;
-    justify-content: center;
+
 }
-.card {
-    border-radius: 15px;
-    border: 1px solid black;
-    overflow: hidden;
+.team {
+    letter-spacing: .2em;
+    text-align: center;
+    padding: 20px 0;
 }
 
-.card-header {
+.card {
+    overflow: hidden;
     margin: 0;
     padding: 0;
-    background-color: orange;
+}
+
+.header {
+    margin: 0;
+    padding: 0;
 }
 
 .card-body {
     margin: 0;
     padding: 0;
-    background-color: rgb(110, 110, 255);
+
 }
