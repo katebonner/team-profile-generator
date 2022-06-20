@@ -4,10 +4,9 @@
 
 This command-line applications prompts the user for input on the profile information of team members and then generates an HTML file to display the team roster
 
-![team dashboard](./assets/team.png)
-
-
 https://user-images.githubusercontent.com/96092615/174637057-caef3bc2-4f52-4b7a-a541-50c698f5d43b.mov
+
+![team dashboard](./assets/team.png)
 
 
 ## Table of Contents 
@@ -15,6 +14,7 @@ https://user-images.githubusercontent.com/96092615/174637057-caef3bc2-4f52-4b7a-
 * [Installation](#installation)
 * [Usage](#usage)
 * [Credits](#credits)
+* [Tests](#tests)
 * [License](#license)
 
 
@@ -48,9 +48,9 @@ This project provides an example of of how to collect user input via inquirer.js
 
 This project leverages [Bootstrap](https://getbootstrap.com/) for styling.
 
+## Tests
 
 https://user-images.githubusercontent.com/96092615/174636984-ffb3665a-f3ff-45b8-9ff2-3ced990f3777.mov
-
 
 
 ## License
