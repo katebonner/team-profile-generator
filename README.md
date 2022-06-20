@@ -1,4 +1,4 @@
-# Columbia University Coding Bootcamp - Team Profile Generator: Challenge 6: 
+# Columbia University Coding Bootcamp - Team Profile Generator: Challenge 10 
 
 ## Description
 
